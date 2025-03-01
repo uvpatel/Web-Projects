@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Logo Scroller</title>
+    <style>
+        .skills {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .logo-scroller {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .logo-track {
+            display: inline-flex; /* Smoother looping */
+            animation: scroll 25s linear infinite;
+            white-space: nowrap; /* Prevents wrapping */
+        }
+
+        .skill-logo {
+            height: 100px; /* Adjustable */
+            margin: 0 20px;
+            flex-shrink: 0;
+        }
+
+        /* Horizontal scroll animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%); /* Moves half the track */
+            }
+        }
+
+        /* Pause on hover (optional) */
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="logo-scroller">
+            <div class="logo-track" id="logoTrack"></div>
+
+        </div>
+    </section>
+
+    <script>
+        const logos = [
+            { src: "python.jpg", alt: "Python" },
+            // { src: "", alt: "AI/ML" },
+            { src: "c.jpg", alt: "C" },
+            { src: "css.jpg", alt: "CSS" },
+            { src: "html.jpg", alt: "HTML" },
+            { src: "tailwind.jpg", alt: "Tailwind CSS" },
+            { src: "github.png", alt: "Git hub" },
+            // { src: "https://via.placeholder.com/100?text=Data+Science", alt: "Data Science" },
+            // { src: "https://via.placeholder.com/100?text=Ethical+Hacking", alt: "Ethical Hacking" }
+        ];
+
+        const logoTrack = document.getElementById("logoTrack");
+
+        function populateLogos() {
+            const scrollerWidth = document.querySelector(".logo-scroller").offsetWidth;
+            const logoWidth = 140; // Approx width (100px height + 40px margin)
+            const logosPerSet = logos.length;
+            const setWidth = logosPerSet * logoWidth;
+            const minSets = Math.ceil((scrollerWidth * 2) / setWidth); // At least 2x screen width
+
+            // Populate logos dynamically
+            for (let i = 0; i < minSets; i++) {
+                logos.forEach(logo => {
+                    const img = document.createElement("img");
+                    img.src = logo.src;
+                    img.alt = logo.alt;
+                    img.classList.add("skill-logo");
+                    logoTrack.appendChild(img);
+                });
+            }
+        }
+
+        // Run on page load
+        populateLogos();
+
+        // Adjust on resize (optional)
+        window.addEventListener("resize", () => {
+            logoTrack.innerHTML = ""; // Clear current logos
+            populateLogos(); // Repopulate
+        });
+    </script>
+</body>
+</html>

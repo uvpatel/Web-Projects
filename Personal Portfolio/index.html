@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urvil's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home" class="logo-text">Urvil Patel</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <label class="switch">
+            <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#FFD700"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+            <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#FFD700" d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>
+            <input type="checkbox" class="input" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="home" class="hero scroll">
+        <div class="hero-content">
+            <p class="hello">HELLO!</p>
+            <h1 class="name">I'm <span class="highlight">Urvil Patel</span></h1>
+            <p class="title">
+                <span class="typewriter"></span>
+            </p>
+            
+            <a href="tel:+91 9016056853" class="button">Contact Me</a>
+            <a href="Resume.pdf" download="Urvil_Patel_Resume.pdf" class="button">Resume</a>
+        </div>
+        <div class="profile-container noselect">
+            <div class="canvas">
+                <div class="tracker tr-1"></div>
+                <div class="tracker tr-2"></div>
+                <div class="tracker tr-3"></div>
+                <div class="tracker tr-4"></div>
+                <div class="tracker tr-5"></div>
+                <div class="tracker tr-6"></div>
+                <div class="tracker tr-7"></div>
+                <div class="tracker tr-8"></div>
+                <div class="tracker tr-9"></div>
+                <div class="tracker tr-10"></div>
+                <div class="tracker tr-11"></div>
+                <div class="tracker tr-12"></div>
+                <div class="tracker tr-13"></div>
+                <div class="tracker tr-14"></div>
+                <div class="tracker tr-15"></div>
+                <div class="tracker tr-16"></div>
+                <div class="tracker tr-17"></div>
+                <div class="tracker tr-18"></div>
+                <div class="tracker tr-19"></div>
+                <div class="tracker tr-20"></div>
+                <div class="tracker tr-21"></div>
+                <div class="tracker tr-22"></div>
+                <div class="tracker tr-23"></div>
+                <div class="tracker tr-24"></div>
+                <div class="tracker tr-25"></div>
+                <div id="profile-card">
+                    <img src="myimage.png" alt="Urvil's Profile" class="profile-image" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about scroll">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a passionate developer with interests in AI, web development, and
+                    cybersecurity. Currently exploring Python and front-end technologies to
+                    build innovative solutions.
+                </p>
+            </div>
+            <div class="info-grid">
+                <span class="info-label">Name:</span>
+                <span>Urvil Patel</span>
+                <span class="info-label">Email:</span>
+                <span class="email">
+                    <a href="mailto:uvpatel7271@gmail.com">uvpatel7271@gmail.com</a>
+                </span>
+                <span class="info-label">Role:</span>
+                <span>AI Enthusiast & Web Developer</span>
+                <span class="info-label">Focus:</span>
+                <span>Python, Web Development, Cybersecurity</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills scroll">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-scroller">
+            <div class="skills-track" id="skillsTrack"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="about scroll">
+        <h2 class="section-title">Projects</h2>
+        <div class="about-content">
+            <div class="project-card">
+                <h3>File Organizer</h3>
+                <p>A Python script that efficiently organizes files into categorized folders based on their extensions.</p>
+                <a href="https://github.com/uvpatel/Py-pro" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Python Games</h3>
+                <p>Developed small interactive games in Python using libraries like Pygame and Tkinter.</p>
+                <a href="https://github.com/uvpatel/Py-pro" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>C Programming Projects</h3>
+                <p>Created simple C programs, including a calculator and number guessing game, to strengthen logic-building skills.</p>
+                <a href="https://github.com/uvpatel/c-small-project" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Web Development Projects</h3>
+                <p>Built basic static websites using HTML and CSS, improving front-end development skills.</p>
+                <a href="https://github.com/uvpatel/web-projects" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="skills scroll">
+        <h2 class="section-title">Contact</h2>
+        <div class="about-content">
+            <a href="tel:+919016056853" target="_blank">
+                <img src="phone (2).gif" alt="Phone" width="40" height="40">
+            </a>
+            <a href="mailto:urvilpatel2005@gmail.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="40" height="40">
+            </a>
+            <a href="https://github.com/uvpatel" target="_blank">
+                <img src="github.png" alt="GitHub" width="40" height="40">
+            </a>
+            <a href="https://linkedin.com/in/urvil-patel-6995a0320" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40" height="40">
+            </a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>Copyright © 2025 All rights reserved | This design is made by Urvil Patel</p>
+    </footer>
+
+    <div class="custom-cursor"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
