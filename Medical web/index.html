@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hub - Your Healthcare Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MediCare</div>
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#medicines">Medicines</a></li>
+                <li><a href="#available-medicines">Shop</a></li>
+                <li><a href="#consult">Consult</a></li>
+                <li><a href="#labs">Lab Tests</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
+                <li class="cart-item"><a href="#cart">Cart <span id="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MediCare Hub</h1>
+            <p id="typing-text"></p>
+            <button class="cta" onclick="openOrderModal()">Order Now</button>
+        </div>
+    </section>
+
+    <section id="medicines" class="section">
+        <h2>Order Medicines</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Prescription Drugs</h3>
+                <p>Get your prescribed medicines delivered in under 24 hours.</p>
+            </div>
+            <div class="service-card">
+                <h3>OTC Products</h3>
+                <p>Browse over-the-counter healthcare essentials.</p>
+            </div>
+            <div class="service-card">
+                <h3>Health Devices</h3>
+                <p>Shop medical devices for home use.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="available-medicines" class="section">
+        <h2>Available Medicines</h2>
+        <div class="medicine-grid">
+            <div class="medicine-card">
+                <h3>Paracetamol 500mg</h3>
+                <p class="price">₹20.00</p>
+                <p class="status in-stock">In Stock</p>
+                <button class="cta add-to-cart" data-name="Paracetamol 500mg" data-price="20.00">Add to Cart</button>
+            </div>
+            <div class="medicine-card">
+                <h3>Amoxicillin 250mg</h3>
+                <p class="price">₹45.00</p>
+                <p class="status in-stock">In Stock</p>
+                <button class="cta add-to-cart" data-name="Amoxicillin 250mg" data-price="45.00">Add to Cart</button>
+            </div>
+            <div class="medicine-card">
+                <h3>Aspirin 75mg</h3>
+                <p class="price">₹15.00</p>
+                <p class="status out-of-stock">Out of Stock</p>
+                <button class="cta" disabled>Out of Stock</button>
+            </div>
+            <div class="medicine-card">
+                <h3>Cetirizine 10mg</h3>
+                <p class="price">₹30.00</p>
+                <p class="status in-stock">In Stock</p>
+                <button class="cta add-to-cart" data-name="Cetirizine 10mg" data-price="30.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="consult" class="section">
+        <h2>Consult Doctors</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Video Consultation</h3>
+                <p>Connect with specialists via video in minutes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Chat Support</h3>
+                <p>Get instant advice through text chat.</p>
+            </div>
+            <div class="service-card">
+                <h3>Book Appointment</h3>
+                <p>Schedule in-person visits with top doctors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="labs" class="section">
+        <h2>Lab Tests</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Blood Tests</h3>
+                <p>Home sample collection for all blood tests.</p>
+            </div>
+            <div class="service-card">
+                <h3>Full Body Checkup</h3>
+                <p>Comprehensive health screening packages.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Reports</h3>
+                <p>Access your test results online instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <select required>
+                    <option value="">Select Query Type</option>
+                    <option value="medicine">Medicine Order</option>
+                    <option value="consult">Doctor Consultation</option>
+                    <option value="lab">Lab Test Booking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+            </div>
+            <button class="cta" type="submit">Send Query</button>
+        </div>
+    </section>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Place Your Order</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Medicine Name" required>
+            </div>
+            <div class="form-group">
+                <input type="file" accept=".pdf,.jpg,.png" placeholder="Upload Prescription">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Delivery Address" required>
+            </div>
+            <button class="cta" onclick="alert('Order placed successfully!'); closeOrderModal();">Submit Order</button>
+            <button class="cta" onclick="closeOrderModal()" style="background: #ccc; margin-left: 1rem;">Cancel</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>MediCare Hub</h3>
+                <p>Your trusted healthcare companion.</p>
+            </div>
+            <div class="footer-right">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Designed by Urvil Patel & Parth Tholiya | &copy; 2025 MediCare Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
